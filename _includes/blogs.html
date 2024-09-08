@@ -17,8 +17,8 @@
             <div class="activity-grid" style="margin-top: 40px;">
                 <h3 class="subsection-heading">활동</h3>
                 <ul class="activity-list">
-                    <li><strong>2024.01.01 ~ 현재:</strong> 창업동아리 <a href="yulo.html" target="_blank">YULO</a></li>
-                    <li><strong>2023.03.30 ~ 현재:</strong> 전공동아리 J.A.P</a></li>
+                    <li><strong>2024.01.01 ~ 현재:</strong> 창업동아리 <a href="#" id="open-modal">YULO</a></li>
+                    <li><strong>2023.03.30 ~ 현재:</strong> 전공동아리 J.A.P</li>
                 </ul>
             </div>
 
@@ -33,7 +33,55 @@
     </section>
 </div>
 
+<!-- 모달 창 -->
+<div id="yulo-modal" class="modal">
+    <div class="modal-content">
+        <span class="close" id="close-modal">&times;</span>
+        <h2>YULO 창업동아리</h2>
+        <p>YULO 창업동아리는 혁신적인 아이디어와 비즈니스 모델을 통해 다양한 프로젝트를 진행하는 동아리입니다.</p>
+        <p>여기에는 동아리의 활동, 성과, 프로젝트 관련 정보들을 자세히 소개할 수 있습니다.</p>
+    </div>
+</div>
+
+<!-- 스타일 -->
 <style>
+    /* 모달 기본 스타일 */
+    .modal {
+        display: none; /* 기본적으로 숨김 */
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        max-width: 600px;
+        border-radius: 10px;
+    }
+
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
     .qualification-grid, .activity-grid, .awards-grid {
         display: flex;
         flex-direction: column;
@@ -68,3 +116,28 @@
         text-decoration: underline;
     }
 </style>
+
+<!-- JavaScript 모달 작동 -->
+<script>
+    // 모달 관련 요소
+    var modal = document.getElementById("yulo-modal");
+    var openModalBtn = document.getElementById("open-modal");
+    var closeModalBtn = document.getElementById("close-modal");
+
+    // 모달 열기
+    openModalBtn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    // 모달 닫기
+    closeModalBtn.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // 모달 외부 클릭 시 닫기
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
