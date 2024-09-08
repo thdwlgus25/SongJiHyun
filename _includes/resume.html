@@ -1,20 +1,4 @@
-<section class="head" id="nav">
-    <div class="head-inner-wrap">
-        <div class="profile-pic-div animated">
-            <a href="#about" class="profile-pic-link"><img src="{{ site.profile_picture }}" class="profile-pic"/></a>
-        </div>
-        <div class="head-name head-title animated" id="head-name">{{ site.title }}</div>
-        <div class="head-punchline animated">{{ site.description }}</div>
-        <div class="head-menu-wrap">
-            <a class="semi-transparent-button with-border nav-links" href="#about">ABOUT</a>
-            <a class="semi-transparent-button with-border nav-links" href="#skills">SKILLS</a>
-            <a class="semi-transparent-button with-border nav-links" href="#resume">RESUME</a>
-            <a class="semi-transparent-button with-border nav-links" href="#projects">PROJECTS</a>
-        </div>
-    </div>
-</section>
-
-<!-- 이력 사항 -->
+<!-- Resume 섹션 -->
 <div class="section-wrapper">
     <section class="section qualifications" id="resume" style="margin-bottom: 40px;">
         <div>
@@ -47,6 +31,15 @@
         </div>
     </section>
 </div>
+
+<!-- JavaScript -->
+<script>
+    // resume 버튼 클릭 시 강제로 스크롤 이동
+    document.querySelector('.nav-links[href="#resume"]').addEventListener('click', function(event) {
+        event.preventDefault(); // 기본 앵커 동작 방지
+        document.getElementById('resume').scrollIntoView({ behavior: 'smooth' }); // 부드럽게 이동
+    });
+</script>
 
 <style>
     .section-wrapper {
