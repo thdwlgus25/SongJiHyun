@@ -1,5 +1,5 @@
 title: SongJiHyun Portfolio
-description: a passionate developer Portfolio
+description: 성장하는 과정을 깊이 즐기는 개발자입니다.
 site_title: Portfolio
 
 # Build settings
@@ -7,15 +7,12 @@ markdown: kramdown
 exclude: [vendor/ruby]
 
 # Personalization
-github_username: abhn
-blog_url: https://www.nagekar.com
-email: abhishek@nagekar.com
-keybase_username: abhn
-twitter_username: abhn_
-reddit_username: abhn
+github_username: 송지현
+blog_url: https://thdwlgus25.github.io/SongJiHyun/
+email: 202245024@itc.ac.kr
 
 # absolute or relative
-profile_picture: assets/images/pp.jpg
+profile_picture: assets/images/photo.jpg
 
 # Google Analytics ID
 google_analytics: 
