@@ -2,18 +2,18 @@
     <section class="section about" id="about">
         <div id="about-text">
             <div class="section-heading">a passionate developer</div>
-            <p class="paragraph-text justify-text">
+            <p class="paragraph-text center-text">
                 변화와 도전 속에서 스스로를 확장하며, 그 안에서 얻는 통찰과 성취감을 소중히 여기는 개발자 송지현입니다.
             </p>
 
             <div class="profile-info">
-                <img src= assets/images/photo.jpg alt="Profile Photo" class="profile-photo">
+                <img src="assets/images/photo.jpg" alt="Profile Photo" class="profile-photo">
                 <ul class="profile-details">
-                    <li><strong>Birthday:</strong> 2002.08.27 </li>
+                    <li><strong>Birthday:</strong> 2002.08.27</li>
                     <li><strong>Email:</strong> thdwlgus258@naver.com</li>
-                    <li><strong>Phone:</strong> 010-6890-2575 </li>
+                    <li><strong>Phone:</strong> 010-6890-2575</li>
                     <li><strong>City:</strong> 인천광역시 서구</li>
-                    <li><strong>Age:</strong> 23 </li>
+                    <li><strong>Age:</strong> 23</li>
                     <li><strong>Degree:</strong> 인하공업전문대학 컴퓨터시스템과</li>
                 </ul>
             </div>
@@ -35,13 +35,14 @@
     .profile-info {
         display: flex;
         align-items: center;
+        font-size: 1.2rem; /* 텍스트 크기 조정 */
     }
 
     .profile-photo {
-        width: 150px;
-        height: 150px;
+        width: 200px; /* 사진 크기 확대 */
+        height: 200px;
         border-radius: 50%;
-        margin-right: 20px;
+        margin-right: 30px;
     }
 
     .profile-details {
@@ -50,7 +51,7 @@
     }
 
     .profile-details li {
-        margin-bottom: 5px;
+        margin-bottom: 10px;
     }
 
     .skills-section {
@@ -60,10 +61,13 @@
     .quote {
         font-style: italic;
         margin-top: 20px;
+        white-space: nowrap; /* 텍스트 줄넘김 방지 */
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     .section-heading {
-        font-size: 2rem;
+        font-size: 2.5rem;
         margin-bottom: 10px;
     }
 
@@ -73,5 +77,9 @@
 
     .justify-text {
         text-align: justify;
+    }
+
+    .center-text {
+        text-align: center;
     }
 </style>
