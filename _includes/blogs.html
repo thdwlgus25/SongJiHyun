@@ -37,16 +37,16 @@
 <div id="yulo-modal" class="modal">
     <div class="modal-content">
         <span class="close" id="close-modal">&times;</span>
-        <h2>YULO 창업동아리</h2>
+        <h2 class="project-title">1학기 프로젝트 - 사용자 맞춤 지능형 CCTV 관제 서비스</h2>
+        <h2 class="project-title">1학기 프로젝트 - 사용자 맞춤 지능형 CCTV 관제 서비스</h2>
         <p>YULO 창업동아리는 YULO(You Unsafe Least Once) 
             You Unsafe Least Once : "한번은 위기에 처한다“
             다양한 환경에서 안일하게 작업하는 위험을 인식시키고, 지속적인 모니터링의 중요성을 강조한다는 뜻입니다.</p>
         <p>저희 동아리는 현대 사회에서 안전과 보안에 대한 요구가 높아짐에 따라, 지능형 감시 시스템을 개발하였습니다.</p>
         <br>
-        <p>1학기 프로젝트 - 사용자 맞춤 지능형 CCTV 관제 서비스</p>
-        <P>서비스 아키텍처</P>
+        <h3 class="subsection-title">서비스 아키텍처</h3>
         <img src="assets/images/YULO_1-1.png" alt="서비스 아키텍처" class="modal-photo">
-        <P>주요 기능</P>
+        <h3 class="subsection-title">주요 기능</h3>
         <img src="assets/images/YULO_1-2.png" alt="주요 기능" class="modal-photo">
         <img src="assets/images/YULO_1-3.png" alt="주요 기능" class="modal-photo">
         <img src="assets/images/YULO_1-4.png" alt="주요 기능" class="modal-photo">
@@ -57,6 +57,23 @@
 
 <!-- 스타일 -->
 <style>
+    /* 대제목 스타일 */
+    .project-title {
+        font-size: 2.5rem; /* 대제목 글자 크기 */
+        font-weight: bold; /* 굵은 글씨체 */
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    /* 소제목 스타일 */
+    .subsection-title {
+        font-size: 2rem; /* 소제목 글자 크기 */
+        font-weight: bold; /* 굵은 글씨체 */
+        margin-top: 20px;
+        margin-bottom: 10px;
+        text-align: left;
+    }
+
     /* 모달 기본 스타일 */
     .modal {
         display: none;
@@ -67,18 +84,18 @@
         width: 100%;
         height: 100%;
         overflow: auto;
-        background-color: rgba(0, 0, 0, 0.6); /* 어두운 배경 */
+        background-color: rgba(0, 0, 0, 0.6);
     }
 
     .modal-content {
         background-color: #fefefe;
-        margin: 5% auto; /* 화면의 상단에서 5% 떨어지도록 변경 */
+        margin: 5% auto;
         padding: 20px;
         border: 1px solid #888;
-        width: 90%; /* 너비를 90%로 확대 */
-        max-width: 900px; /* 최대 너비 설정 */
-        border-radius: 20px; /* 테두리 둥글게 */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 부드러운 그림자 */
+        width: 90%;
+        max-width: 900px;
+        border-radius: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
 
     .close {
@@ -86,7 +103,7 @@
         float: right;
         font-size: 28px;
         font-weight: bold;
-        margin-top: -10px; /* 닫기 버튼을 위로 조정 */
+        margin-top: -10px;
     }
 
     .close:hover,
@@ -98,45 +115,11 @@
 
     /* 이미지 크기 조정 */
     .modal-photo {
-        width: 100%; /* 너비를 100%로 */
-        max-height: 500px; /* 최대 높이 제한 */
-        object-fit: cover; /* 비율을 유지하면서 잘라내기 */
-        margin-bottom: 20px; /* 이미지 사이 여백 추가 */
-        border-radius: 10px; /* 이미지도 둥글게 */
-    }
-
-    .qualification-grid, .activity-grid, .awards-grid {
-        display: flex;
-        flex-direction: column;
+        width: 100%;
+        max-height: 500px;
+        object-fit: cover;
         margin-bottom: 20px;
-    }
-
-    .subsection-heading {
-        font-size: 1.5rem;
-        color: #34495e;
-        margin-bottom: 10px;
-    }
-
-    ul {
-        list-style-type: none;
-        padding-left: 0;
-    }
-
-    li {
-        font-size: 1.1rem;
-        margin-bottom: 10px;
-        line-height: 1.6;
-    }
-
-    a {
-        color: #2980b9;
-        text-decoration: none;
-        transition: color 0.3s ease;
-    }
-
-    a:hover {
-        color: #3498db;
-        text-decoration: underline;
+        border-radius: 10px;
     }
 </style>
 
@@ -164,4 +147,5 @@
         }
     }
 </script>
+
 
