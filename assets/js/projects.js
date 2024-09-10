@@ -11,30 +11,30 @@ let render_projects = (slug) => {
 
     let projects_obj = [
         {
-            image: 'assets/images/mentors.jpg',
+            image: 'assets/images/GUI_main.png',
             link: 'https://github.com/abhn/Mporter',
-            title: 'Mporter',
+            title: '자바 GUI 병원 시스템',
             demo: 'https://mporter.co',
-            technologies: ['Flask', 'Celery', 'Python'],
-            description: "Flask web application for easy reporting updates to one's mentor. Multi-user support, easy to deploy and use.",
+            technologies: ['JAVA', 'DATABASE', 'GUI'],
+            description: "JAVA Swing을 사용하여 그래픽 사용자 인터페이스(GUI)로 병원 시스템을 구현하였습니다.",
             categories: ['featured', 'webdev']
         },
         {
-            image: 'assets/images/mobile-landscape.jpg',
+            image: 'assets/images/JSP_main.png',
             link: 'https://github.com/abhn/Wall-E',
-            title: 'Wall-E',
+            title: '24시 약국 사이트',
             demo: 'http://wall-e-jekyll.github.io/',
-            technologies: ['Semantic UI', 'Jekyll'],
-            description: "A modern Jekyll theme with grid frontpage, beautiful typography, mobile responsive, made with Semantic UI.",
+            technologies: ['JAVA', 'JSP', 'DATABASE'],
+            description: "응급 상황에서의 신속한 서비스 제공이라는 현실적인 문제에 대한 중점을 둔 프로젝트입니다. ",
             categories: ['featured', 'webdev']
         },
         {
-            image: 'assets/images/collage.jpg',
+            image: 'assets/images/GUI2_main.png',
             link: 'https://github.com/abhn/Marvel',
-            title: 'Marvel',
+            title: '끝말잇기 게임',
             demo: false,
-            technologies: ['Android', 'OpenCV'],
-            description: "Attendance marking tool that uses face recognition for marking attendance and firebase for tracking and analytics.",
+            technologies: ['JAVA', 'GUI'],
+            description: "사용자들에게 몰입감을 제공하는 동시에, 직관적인 디자인을 제공하여 사용자 친화적인 인터페이스를 구현한 프로젝트입니다.",
             categories: ['featured', 'native']
         },
         {
