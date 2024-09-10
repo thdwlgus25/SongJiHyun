@@ -1,5 +1,19 @@
 $(document).ready(() => {
     render_projects('all'); // 항상 'all' 카테고리로 시작
+
+    // 모달 닫기 기능
+    var modal = document.getElementById("project-modal");
+    var closeModalBtn = document.getElementById("close-modal");
+
+    closeModalBtn.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
 });
 
 let render_projects = () => {
@@ -60,38 +74,59 @@ let render_projects = () => {
     projects_area.hide().html(projects).fadeIn(); // 모든 프로젝트 표시
 }
 
-let project_mapper = project => {
+let project_mapper = (project, index) => {
     return `
         <div class="wrapper">
-                
             <div class="card radius shadowDepth1">
-
                 ${project.image ? 
                     `<div class="card__image border-tlr-radius">
                         <a href="${project.link}">
                             <img src="${project.image}" alt="image" id="project-image" class="border-tlr-radius">
                         </a>
-                    </div>`           
-                : ''}
-
-        
+                    </div>` : ''}
+                
                 <div class="card__content card__padding">
-        
                     <article class="card__article">
                         <h2><a href="${project.link}">${project.title}</a></h2>
-        
+                        <button class="detail-button" onclick="openModal(${index})">[상세보기]</button>
                         <p class="paragraph-text-normal">${project.description} ${project.demo ? `<a href="${project.demo}">Demo</a>` : ''}</p>
                     </article>
-
-                                
+                    
                     <div class="card__meta">
                         ${project.technologies.map(tech =>
                             `<span class="project-technology paragraph-text-normal">${tech}</span>`
                         ).join('')}
                     </div>
-
                 </div>
             </div>
         </div>
     `;
+}
+
+// 모달 창에 프로젝트 정보 표시
+let openModal = (index) => {
+    let projects_obj = [
+        {
+            title: '자바 GUI 병원 시스템',
+            description: "JAVA Swing을 사용하여 그래픽 사용자 인터페이스(GUI)로 병원 시스템을 구현하였습니다.",
+            technologies: ['JAVA', 'DATABASE', 'GUI']
+        },
+        {
+            title: '24시 약국 사이트',
+            description: "응급 상황에서의 신속한 서비스 제공이라는 현실적인 문제에 대한 중점을 둔 프로젝트입니다.",
+            technologies: ['JAVA', 'JSP', 'DATABASE']
+        }
+        // 추가 프로젝트들...
+    ];
+
+    let project = projects_obj[index];
+
+    // 모달 내용 업데이트
+    document.getElementById('modal-title').innerText = project.title;
+    document.getElementById('modal-description').innerText = project.description;
+    document.getElementById('modal-technologies').innerHTML = project.technologies.map(tech => `<span>${tech}</span>`).join(', ');
+
+    // 모달 열기
+    var modal = document.getElementById("project-modal");
+    modal.style.display = "block";
 }
