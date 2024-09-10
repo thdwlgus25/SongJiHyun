@@ -103,6 +103,7 @@ let project_mapper = (project, index) => {
     `;
 }
 
+
 // 모달 창에 프로젝트 정보 표시
 let openModal = (index) => {
     let projects_obj = [
