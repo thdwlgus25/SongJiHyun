@@ -1,13 +1,12 @@
 $(document).ready(() => {
-    render_projects('featured');
-})
+    render_projects('all'); // 항상 'all' 카테고리로 시작
+});
 
-
-let render_projects = (slug) => {
+let render_projects = () => {
     let projects_area = $('.projects-wrapper');
 
     $('.white-button').removeClass('white-button-hover');
-    $(`#${slug}`).addClass('white-button-hover');
+    $('#all').addClass('white-button-hover'); // 항상 All 버튼에 하이라이트
 
     let projects_obj = [
         {
@@ -55,16 +54,10 @@ let render_projects = (slug) => {
             description: "여기에다가써야대",
             categories: ['native']
         },
-    ]
+    ];
 
-    let projects = [];
-    if(slug == 'all') {
-        projects = projects_obj.map(project_mapper);
-    } 
-    else {
-        projects = projects_obj.filter(project => project.categories.includes(slug)).map(project_mapper);
-    }
-    projects_area.hide().html(projects).fadeIn();
+    let projects = projects_obj.map(project_mapper);
+    projects_area.hide().html(projects).fadeIn(); // 모든 프로젝트 표시
 }
 
 let project_mapper = project => {
@@ -100,9 +93,5 @@ let project_mapper = project => {
                 </div>
             </div>
         </div>
-    `
-}
-
-let selected = (slug) => {
-    render_projects(slug);
+    `;
 }
