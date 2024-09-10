@@ -14,7 +14,7 @@ let render_projects = (slug) => {
             image: 'assets/images/GUI_main.png',
             link: 'https://github.com/abhn/Mporter',
             title: '자바 GUI 병원 시스템',
-            demo: 'https://mporter.co',
+            demo: false,
             technologies: ['JAVA', 'DATABASE', 'GUI'],
             description: "JAVA Swing을 사용하여 그래픽 사용자 인터페이스(GUI)로 병원 시스템을 구현하였습니다.",
             categories: ['featured', 'webdev']
@@ -23,7 +23,7 @@ let render_projects = (slug) => {
             image: 'assets/images/JSP_main.png',
             link: 'https://github.com/abhn/Wall-E',
             title: '24시 약국 사이트',
-            demo: 'http://wall-e-jekyll.github.io/',
+            demo: false,
             technologies: ['JAVA', 'JSP', 'DATABASE'],
             description: "응급 상황에서의 신속한 서비스 제공이라는 현실적인 문제에 대한 중점을 둔 프로젝트입니다. ",
             categories: ['featured', 'webdev']
@@ -38,21 +38,21 @@ let render_projects = (slug) => {
             categories: ['featured', 'native']
         },
         {
-            image: 'assets/images/mpw.jpg',
-            link: 'https://github.com/abhn/mpw',
-            title: 'Master Password',
-            demo: 'https://www.nagekar.com/mpw',
-            technologies: ['Semantic UI', 'CSS3'],
-            description: "Master Password is an ingenious password solution that makes your passwords truly impossible to lose.",
+            image: 'assets/images/YULO_main.png',
+            link: 'https://github.com/weekendact/YULO_Back',
+            title: '사용자 맞춤 지능형 CCTV 관제 서비스',
+            demo: false,
+            technologies: ['SPRINGBOOT', 'DATABASE','REACT','PYTHON','YOLO'],
+            description: "사용자가 선택한 AI 모델을 활용하여 웹 플랫폼을 통해 기존 지능형 CCTV 시스템에서 다루지 못하는 영역까지 구현한 프로젝트입니다.",
             categories: ['featured', 'security']
         },
         {
             image: 'assets/images/social-share-count.jpeg',
-            link: 'https://github.com/abhn/Social-Share-Counts',
-            title: 'Social Share Count',
+            link: 'https://github.com/YULOTeam/Yulo_Server',
+            title: '스마트 캠퍼스 안전 시스템',
             demo: false,
-            technologies: ['Python'],
-            description: "Ever wondered how many times a URL has been shared on popular social networks?",
+            technologies: ['SPRINGBOOT','PASTAPI','THYMELEAF'],
+            description: "여기에다가써야대",
             categories: ['native']
         },
         {
