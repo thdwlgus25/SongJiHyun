@@ -114,8 +114,8 @@ let openModal = (index) => {
             images: ['assets/images/JSP_1.png','assets/images/JSP_2.png','assets/images/JSP_3.png','assets/images/JSP_4.png','assets/images/JSP_5.png']
         },
         {
-            title: '365 약국 사이트',
-            images: ['assets/images/JSP_1.png','assets/images/JSP_2.png','assets/images/JSP_3.png','assets/images/JSP_4.png','assets/images/JSP_5.png']
+            title: '끝말잇기 게임',
+            images: ['assets/images/GUI2_1.png','assets/images/GUI2_2.png','assets/images/GUI2_3.png','assets/images/GUI2_4.png']
         },
         {
             title: '사용자 맞춤 지능형 CCTV 관제 서비스',
