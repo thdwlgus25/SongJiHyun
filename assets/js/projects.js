@@ -121,27 +121,10 @@ let openModal = (index) => {
 
     // 모달 내용 업데이트
     document.getElementById('modal-title').innerText = project.title;
-
-    // 이미지들만 추가
-    let modalImageContainer = document.getElementById('modal-images');
-    modalImageContainer.innerHTML = '';  // 이전 이미지 초기화
-    project.images.forEach(imageSrc => {
-        let imgElement = document.createElement('img');
-        imgElement.src = imageSrc;
-        imgElement.style.maxWidth = '100%';
-        imgElement.style.height = 'auto';
-        modalImageContainer.appendChild(imgElement);
-    });
+    document.getElementById('modal-description').innerText = project.description;
+    document.getElementById('modal-technologies').innerHTML = project.technologies.map(tech => `<span>${tech}</span>`).join(', ');
 
     // 모달 열기
     var modal = document.getElementById("project-modal");
     modal.style.display = "block";
 }
-
-<div id="project-modal" class="modal">
-    <div class="modal-content">
-        <span id="close-modal" class="close">&times;</span>
-        <h2 id="modal-title"></h2>
-        <div id="modal-images"></div> 
-    </div>
-</div>
