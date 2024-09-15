@@ -108,13 +108,11 @@ let openModal = (index) => {
     let projects_obj = [
         {
             title: '자바 GUI 병원 시스템',
-            description: "",
-            image: 'assets/images/GUI1_1.png'
+            images: ['assets/images/GUI1_1.png', 'assets/images/GUI1_2.png']
         },
         {
             title: '24시 약국 사이트',
-            description: "응급 상황에서의 신속한 서비스 제공이라는 현실적인 문제에 대한 중점을 둔 프로젝트입니다.",
-            technologies: ['JAVA', 'JSP', 'DATABASE']
+            images: ['assets/images/JSP_main.png', 'assets/images/JSP_main2.png']
         }
         // 추가 프로젝트들...
     ];
@@ -123,10 +121,27 @@ let openModal = (index) => {
 
     // 모달 내용 업데이트
     document.getElementById('modal-title').innerText = project.title;
-    document.getElementById('modal-description').innerText = project.description;
-    document.getElementById('modal-technologies').innerHTML = project.technologies.map(tech => `<span>${tech}</span>`).join(', ');
+
+    // 이미지들만 추가
+    let modalImageContainer = document.getElementById('modal-images');
+    modalImageContainer.innerHTML = '';  // 이전 이미지 초기화
+    project.images.forEach(imageSrc => {
+        let imgElement = document.createElement('img');
+        imgElement.src = imageSrc;
+        imgElement.style.maxWidth = '100%';
+        imgElement.style.height = 'auto';
+        modalImageContainer.appendChild(imgElement);
+    });
 
     // 모달 열기
     var modal = document.getElementById("project-modal");
     modal.style.display = "block";
 }
+
+<div id="project-modal" class="modal">
+    <div class="modal-content">
+        <span id="close-modal" class="close">&times;</span>
+        <h2 id="modal-title"></h2>
+        <div id="modal-images"></div> 
+    </div>
+</div>
