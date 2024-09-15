@@ -35,7 +35,7 @@ let render_projects = () => {
         {
             image: 'assets/images/JSP_main.png',
             link: 'https://github.com/abhn/Wall-E',
-            title: '24시 약국 사이트',
+            title: '365 약국 사이트',
             demo: false,
             technologies: ['JAVA', 'JSP', 'DATABASE'],
             description: "응급 상황에서의 신속한 서비스 제공이라는 현실적인 문제에 대한 중점을 둔 프로젝트입니다. ",
@@ -107,11 +107,19 @@ let openModal = (index) => {
     let projects_obj = [
         {
             title: '자바 GUI 병원 시스템',
-            images: ['assets/images/GUI1_1.png', 'assets/images/GUI1_2.png']
+            images: ['assets/images/GUI1_1.png', 'assets/images/GUI1_2.png','assets/images/GUI1_3.png','assets/images/GUI1_4.png','assets/images/GUI1_5.png']
         },
         {
-            title: '24시 약국 사이트',
-            images: ['assets/images/JSP_main.png', 'assets/images/JSP_main2.png']
+            title: '365 약국 사이트',
+            images: ['assets/images/JSP_1.png','assets/images/JSP_2.png','assets/images/JSP_3.png','assets/images/JSP_4.png','assets/images/JSP_5.png']
+        },
+        {
+            title: '365 약국 사이트',
+            images: ['assets/images/JSP_1.png','assets/images/JSP_2.png','assets/images/JSP_3.png','assets/images/JSP_4.png','assets/images/JSP_5.png']
+        },
+        {
+            title: '사용자 맞춤 지능형 CCTV 관제 서비스',
+            images: ['assets/images/yulo1_1.png','assets/images/yulo1_2.png','assets/images/yulo1_3.png','assets/images/yulo1_4.png','assets/images/yulo1_5.png','assets/images/yulo1_6.png','assets/images/yulo1_7.png','assets/images/yulo1_8.png','assets/images/yulo1_9.png','assets/images/yulo1_10.png']
         }
     ];
 
