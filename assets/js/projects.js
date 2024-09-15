@@ -103,7 +103,6 @@ let project_mapper = (project, index) => {
     `;
 }
 
-// 모달 창에 프로젝트 정보 표시
 let openModal = (index) => {
     let projects_obj = [
         {
@@ -114,15 +113,23 @@ let openModal = (index) => {
             title: '24시 약국 사이트',
             images: ['assets/images/JSP_main.png', 'assets/images/JSP_main2.png']
         }
-        // 추가 프로젝트들...
     ];
 
     let project = projects_obj[index];
 
-    // 모달 내용 업데이트
+    // 모달 제목 업데이트
     document.getElementById('modal-title').innerText = project.title;
-    document.getElementById('modal-description').innerText = project.description;
-    document.getElementById('modal-technologies').innerHTML = project.technologies.map(tech => `<span>${tech}</span>`).join(', ');
+
+    // 이미지들만 추가 (modal-description 안에 이미지 삽입)
+    let modalDescription = document.getElementById('modal-description');
+    modalDescription.innerHTML = '';  // 기존 텍스트 초기화
+    project.images.forEach(imageSrc => {
+        let imgElement = document.createElement('img');
+        imgElement.src = imageSrc;
+        imgElement.style.maxWidth = '100%';
+        imgElement.style.height = 'auto';
+        modalDescription.appendChild(imgElement);
+    });
 
     // 모달 열기
     var modal = document.getElementById("project-modal");
