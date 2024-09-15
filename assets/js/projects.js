@@ -108,8 +108,8 @@ let openModal = (index) => {
     let projects_obj = [
         {
             title: '자바 GUI 병원 시스템',
-            description: "JAVA Swing을 사용하여 그래픽 사용자 인터페이스(GUI)로 병원 시스템을 구현하였습니다.",
-            technologies: ['JAVA', 'DATABASE', 'GUI']
+            description: "",
+            image: 'assets/images/GUI1_1.png'
         },
         {
             title: '24시 약국 사이트',
